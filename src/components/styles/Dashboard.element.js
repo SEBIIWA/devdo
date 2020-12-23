@@ -9,6 +9,7 @@ export const Text = styled.code`
 `;
 
 export const Content = styled.div`
+  margin: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,4 +41,10 @@ export const ErrorMessage = styled.p`
   font-size: 0.9rem;
   text-transform: capitalize;
   background-color: #ff4136;
+`;
+
+export const Wrapper = styled.div`
+  min-height: 100vh;
+  color: #dddddd;
+  background-color: #111111;
 `;

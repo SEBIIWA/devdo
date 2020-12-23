@@ -4,11 +4,13 @@ import { useAuth } from "../utils/AuthContext";
 import {
   Text,
   Content,
+  Wrapper,
   Linker,
   SettingIcon,
   LougOutIcon,
   ErrorMessage
 } from "../styles/Dashboard.element";
+import Tabing from "./Tabing";
 
 const Dashboard = () => {
   const history = useHistory();
@@ -27,17 +29,21 @@ const Dashboard = () => {
 
   return (
     <>
-      <Content>
-        <div>
-          <Text>Logged as: {currentUser.email}</Text>
-        </div>
-        <div>
-          <Linker to='/update-profile'>
-            <SettingIcon />
-          </Linker>
-          <LougOutIcon onClick={handleLogout} />
-        </div>
-      </Content>
+      <Wrapper>
+        <Content>
+          <div>
+            <Text>Logged as: {currentUser.email}</Text>
+          </div>
+          <div>
+            <Linker to='/update-profile'>
+              <SettingIcon />
+            </Linker>
+            <LougOutIcon onClick={handleLogout} />
+          </div>
+        </Content>
+
+        <Tabing />
+      </Wrapper>
 
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </>
