@@ -1,9 +1,12 @@
 import React from "react";
+import Display from "../data/Display";
+import Input from "../data/Input";
 
 const Thoughts = () => {
   return (
     <>
-      <h1>Thoughts</h1>
+      <Input note='thoughts' docs='thoughts' />
+      <Display docus='thoughts' />
     </>
   );
 };
